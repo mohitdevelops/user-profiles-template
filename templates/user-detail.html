@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profiles</title>
+		<link rel="icon" href="/templates/favicon.ico">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style>
+			::-webkit-scrollbar {
+				width: 20px;
+			}
+			::-webkit-scrollbar-track {
+				border-radius: 3px;
+			}
+			::-webkit-scrollbar-thumb {
+				background: #30aaba;
+				border-radius: 2px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background: #1f8492;
+			}
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: "Montserrat", sans-serif;
+				background-color: #35bdd0;
+			}
+			main {
+				width: 100%;
+				max-height: 100vh;
+			}
+			a {
+				display: inline-block;
+				text-decoration: none;
+			}
+			.user_wrapper {
+				max-width: 500px;
+				width: 95%;
+				padding: 25px;
+				background-color: #fff;
+				border-radius: 10px;
+				margin: 80px auto;
+				box-shadow: 0 5px 15px rgb(0 0 0 / 24%);
+			}
+            .profile{
+                width: 100%;
+                background-color: rgb(3 33 61 / 20%);
+                height: 100px;
+                position: relative;
+                border-radius: 3px;
+            }
+			a.backBtn{
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				font-size: 13px;
+				background-color: #fff;
+				padding: 5px 7px;
+				border-radius: 10px;
+				font-weight: 600;
+				color: #222;
+			}
+            .profile img{
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                bottom: -50%;
+                transform: translateX(-50%);
+                border: solid 5px #fff;
+                box-shadow: 0 5px 10px #00000062;
+            }
+            .info{
+                margin-top: 80px;
+                text-align: center;
+            }
+            .info h3{
+                font-size: 25px;
+                font-weight: 700;                
+            }
+			.info ul.contact_dets{
+				text-align: left;
+				list-style: none;
+				padding: 25px 0 15px;
+				margin: 0;
+				border-bottom: solid 2px rgba(0, 0, 0, 0.13);
+			}
+			.info ul.contact_dets li {
+				padding: 4px 0 4px 20px;
+				position: relative;
+			}
+			.info ul.contact_dets li i{
+				position: absolute;
+				left: 0;
+				top: 7px;
+			}
+			.info .bottom{
+				display: flex;
+				justify-content: space-between;
+				padding-top: 25px;
+			}
+			.info .bottom p{
+				margin: 0;
+				text-align: left;
+			}
+			.info .bottom p:last-child{
+				text-align: right;
+			}
+			.info .bottom p strong{
+				display: block;
+			}
+			@media screen and (max-width:767px) {
+				.user_wrapper{
+					padding: 20px;
+					width: 90%;
+					margin: 40px auto;
+					font-size: 14px;
+				}
+				.profile img{
+					width: 100px;
+				}
+				.info h3{
+					font-size: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="user_wrapper">
+				<div class="profile">
+					<a href="/users" class="backBtn">👈 Go back</a>
+					<img
+						src="{%IMAGE%}"
+						alt="{%USERNAME%}"
+					/>
+				</div>
+				<div class="info">
+					<h3>{%USERNAME%}</h3>
+					<p>@{%USERACCNAME%}</p>
+					<ul class="contact_dets">
+						<li><i class="fa-solid fa-envelope"></i>{%USEREMAIL%}</li>
+						<li><i class="fa-solid fa-phone"></i>{%USERPHONE%}</li>
+						<li><i class="fa-solid fa-location-dot"></i>{%STREET%}, {%SUITE%}, {%CITY%} - {%ZIPCODE%}</li>
+					</ul>
+					<div class="bottom">
+						<p><strong>Working at:</strong>{%COMPANYNAME%}</p>
+						<p><strong>Website:</strong>{%WEBSITE%}</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

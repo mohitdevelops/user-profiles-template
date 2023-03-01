@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-user-profiles-template",
+  "version": "1.0.0",
+  "description": "Building templates and JSON api to create a profile page of users with the help of placeholders and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitdevelops/user-profiles-template.git"
+  },
+  "keywords": [
+    "nodejs",
+    "template",
+    "placeholders",
+    "api",
+    "json",
+    "replace"
+  ],
+  "author": "Mohit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohitdevelops/user-profiles-template/issues"
+  },
+  "homepage": "https://github.com/mohitdevelops/user-profiles-template#readme"
+}
